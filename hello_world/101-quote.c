@@ -1,6 +1,7 @@
 #include <unistd.h>
 /**
- *Write a C program that prints exactly what i want
+ * main - Entry point
+ * Description: 'Write a C program that prints exactly what i want'
  *Return: 1 if success.
  */
 
