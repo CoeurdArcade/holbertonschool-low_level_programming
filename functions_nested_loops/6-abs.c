@@ -6,7 +6,7 @@
  * @n: character to check
  *
  * Return: value 0 if >= 0
- * 	value - if < 0
+ *	value - if < 0
  */
 
 int _abs(int n)
