@@ -8,8 +8,9 @@
  * Return: nothing if n > 15 or n < 0
  */
 
+void print_times_table(int n)
 {
-	int i, j, k;
+	int i, j;
 
 	if (n >= 0 && n <= 15)
 	{
