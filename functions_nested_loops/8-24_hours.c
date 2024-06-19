@@ -3,8 +3,8 @@
 
 /**
  * jack_bauer - prints every minute of the day of Jack Bauer
- * @i: check hour value (0-23)
- * @j: check minute value (0-59)
+ * @i: check hour value
+ * @j: check minute value
  *
  * Return: void
  */
