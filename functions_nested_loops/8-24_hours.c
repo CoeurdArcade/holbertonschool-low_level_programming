@@ -2,9 +2,12 @@
 #include "stdio.h"
 
 /**
- * main - check the code.
+ * jack_bauer - prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59
+ * @i : character to check
+ * @j : character to check
  *
- * Return: Always 0
+ * Return: value 0 if i < 24
+ *	value 0 if j < 60
  */
 
 void jack_bauer(void)
@@ -14,9 +17,12 @@ void jack_bauer(void)
 	i = 0;
 
 	while (i < 24)
+
 	{
 	j = 0;
+
 	while (j < 60)
+
 	{
 	_putchar((i / 10) + '0');
 	_putchar((i % 10) + '0');
@@ -25,7 +31,9 @@ void jack_bauer(void)
 	_putchar((j % 10) + '0');
 	_putchar('\n');
 	j++;
+
 	}
 	i++;
+
 	}
 }
