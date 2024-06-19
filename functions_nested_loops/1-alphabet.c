@@ -2,21 +2,18 @@
 #include "stdio.h"
 
 /**
- * main - check the code
- * 
- * Return: Always 0
+ * print_alphabet - prints the alphabet in lowercase
  */
 
 void print_alphabet(void)
 {
-	char c = 'a';
+	char c;
 
-	while (c <= 'z')
+	for (c = 'a'; c<= 'z'; c++)
 	{
 
 	_putchar(c);
 
-	c++;
 	}
 
 	_putchar('\n');
