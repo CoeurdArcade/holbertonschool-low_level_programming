@@ -2,9 +2,9 @@
 #include "stdio.h"
 
 /**
- * main - check the code.
+ * print_to_98 - prints all natural numbers from n to 98
  * 
- * Return: Always 0
+ * Return: void
  */
 
 void print_to_98(int n)
