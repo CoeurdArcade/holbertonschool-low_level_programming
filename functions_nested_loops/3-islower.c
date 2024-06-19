@@ -3,13 +3,12 @@
 
 /**
  * _islower - checks for lowercase character
- * c - matches 1 if is lowercase
+ * member c - check for matches depending on returns
+ * return value of _islower - 1 if "c" is lowercase otherwise is 0
  */
 
 int _islower(int c)
 {
-/*
- * This function checks if the input character is a lowercase letter
- */
+
 	return (c >= 'a' && c <= 'z');
 }
