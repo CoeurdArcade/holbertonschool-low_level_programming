@@ -6,8 +6,8 @@
  * @n: character to check
  * 
  * Return: value 1 prints + if n > 0
- *	 value 0 prints 0 if n == 0
- *	value -1 prints - if n < 0 
+ * value 0 prints 0 if n == 0
+ * value -1 prints - if n < 0
  */
 
 int print_sign(int n)
