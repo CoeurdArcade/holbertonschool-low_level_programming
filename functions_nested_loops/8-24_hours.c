@@ -11,7 +11,7 @@
 
 void jack_bauer(void)
 {
-	int i , j;
+	int i, j;
 
 	/* loop through all hours of the day */
 	for (i = 0; i < 24; i++)
