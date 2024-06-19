@@ -2,9 +2,9 @@
 #include "stdio.h"
 
 /**
- * main - check the code.
+ * add - adds two integers and returns the result
  * 
- * Return: Always 0
+ * Return: void
  */
 
 int add(int a, int b)
