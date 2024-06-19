@@ -3,8 +3,9 @@
 
 /**
  * _islower - checks for lowercase character
- * member c - check for matches depending on returns
- * return value of _islower - 1 if "c" is lowercase otherwise is 0
+ * @c: the character to check
+ *
+ * Returns: 1 if the character is lowercase, otherwise 0
  */
 
 int _islower(int c)
