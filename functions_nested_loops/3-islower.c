@@ -2,7 +2,8 @@
 #include "stdio.h"
 
 /**
- * _islower -  checks for lowercase character
+ * _islower - checks for lowercase character
+ * c - matches 1 if is lowercase
  */
 
 int _islower(int c)
