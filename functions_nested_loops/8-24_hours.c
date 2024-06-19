@@ -3,8 +3,6 @@
 
 /**
  * jack_bauer - prints every minute of the day of Jack Bauer
- * @i: hour
- * @j: minutes
  *
  * Return: void
  */
