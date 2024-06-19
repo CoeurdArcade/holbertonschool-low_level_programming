@@ -2,16 +2,16 @@
 #include "stdio.h"
 
 /**
- * jack_bauer - prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59
- * @i: hour value (0-23)
- * @j: minute value (0-59)
+ * jack_bauer - prints every minute of the day of Jack Bauer
+ * @i: check hour value (0-23)
+ * @j: check minute value (0-59)
  *
  * Return: void
  */
 
 void jack_bauer(void)
 {
-	int i,j;
+	int i , j;
 
 	/* loop through all hours of the day */
 	for (i = 0; i < 24; i++)
