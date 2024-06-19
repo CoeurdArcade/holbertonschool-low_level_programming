@@ -3,8 +3,8 @@
 
 /**
  * jack_bauer - prints every minute of the day of Jack Bauer
- * @i: check hour value
- * @j: check minute value
+ * @i: hour value
+ * @j: minute value
  *
  * Return: void
  */
@@ -16,7 +16,6 @@ void jack_bauer(void)
 	/* loop through all hours of the day */
 	for (i = 0; i < 24; i++)
 	{
-
 	/* loop through all minutes of each hour */
 	for (j = 0; j < 60; j++)
 	{
