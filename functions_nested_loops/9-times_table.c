@@ -2,9 +2,9 @@
 #include "stdio.h"
 
 /**
- * main - check the code.
+ * times_table - prints the 9 times table, starting with 0
  *
- * Return: Always 0
+ * Return: void
  */
 
 void times_table(void)
