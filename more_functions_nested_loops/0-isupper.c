@@ -13,10 +13,12 @@ int main (void)
 
 {
 	char c;
+	{
 	c = 'A';
-	printf("%c: %d\n", c, >= ('A' && <= 'Z'));
+	printf("%c: %d\n", c, (>= 'A' && <= 'Z'));
 	c = 'a';
-	printf("%c: %d\n", c, >= ('a' && <= 'z)');
+	printf("%c: %d\n", c, (>= 'a' && <= 'z)');
+	}
 
 	return (0);
 }
