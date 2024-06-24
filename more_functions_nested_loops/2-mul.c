@@ -2,10 +2,9 @@
 #include <stdio.h>
 
 /**
- *int mul - a function that multiplies two integers
+ *mul - a function that multiplies two integers
  *@a: first integer
  *@b: second integer
- *@c: result integer
  *
  *Return: Result of multiplication
 */
