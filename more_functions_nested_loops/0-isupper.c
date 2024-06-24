@@ -9,16 +9,7 @@
  * 	0 otherwise
  */
 
-int main (void)
-
+int _isupper(int c)
 {
-	char c;
-	{
-	c = 'A';
-	printf("%c: %d\n", c, (>= 'A' && <= 'Z'));
-	c = 'a';
-	printf("%c: %d\n", c, (>= 'a' && <= 'z)');
-	}
-
-	return (0);
+	return (c >= 'A' && c <= 'Z');
 }
