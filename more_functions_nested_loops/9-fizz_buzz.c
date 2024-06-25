@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * main - a program that prints the numbers from 1 to 100
+ * main - prints a program that prints the numbers from 1 to 100
  *
- * Returns: prints of numbers,
+ * Return: prints numbers,
  *	Fizz for multiples of 3,
  *	Buzz for multiples of 5,
  *	FizzBuzz for multiples of 3 and 5,
