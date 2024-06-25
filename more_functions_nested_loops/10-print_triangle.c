@@ -9,7 +9,7 @@
  * Returns: if size is 0 or less, prints a new line,
  */
 
-void print_triangle(int size);
+void print_triangle(int size)
 {
 	if (size <= 0)
 	{
