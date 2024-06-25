@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 
 /**
  * print_number - a function that prints an integer
@@ -25,7 +26,7 @@ void print_number(int n)
 
 	int main(void)
 	{	
-	int numbers[] = {INT_MAX, INT_MIN, 0, 123456789, 1024, -4096};
+	int numbers[] = {INT_MAX, INT_MIN, 0, 3, -1, 10, -99, 123456789, 1024, -4096};
 	int i;
 
 	for (i = 0; i < sizeof(numbers) / sizeof(int); i++)
