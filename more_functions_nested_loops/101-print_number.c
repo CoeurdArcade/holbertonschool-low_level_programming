@@ -1,39 +1,28 @@
 #include "main.h"
-#include <limits.h>
-
 /**
- * print_number - a function that prints an integer
- * @n: value to transform
- *
- * Return: an integer
+ * print_number - a function that print a number
+ * @n: variable input
+ * Return: void return nothing
  */
 
 void print_number(int n)
 {
+	unsigned int num;
+
 	if (n < 0)
 	{
-	_putchar('-');
-	n = -n;
+		num = -n;
+		_putchar('-');
 	}
-
-	if (n / 10)
+	else
 	{
-	print_number(n / 10);
+		num = n;
 	}
 
-	_putchar(n % 10 + '0');
-}
-
-	int main(void)
-	{	
-	int numbers[] = {INT_MAX, INT_MIN, 0, 3, -1, 10, -99, 123456789, 1024, -4096};
-	int i;
-
-	for (i = 0; i < sizeof(numbers) / sizeof(int); i++)
+	if (num / 10)
 	{
-	print_number(numbers[i]);
-	_putchar('\n');
+		print_number(num / 10);
 	}
 
-	return (0);
+	_putchar((num % 10) + '0');
 }
