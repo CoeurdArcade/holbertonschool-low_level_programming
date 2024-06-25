@@ -10,8 +10,8 @@ void print_number(int n)
 	if (n == INT_MIN)
 	{
 	_putchar('-');
-	_putchar('2');
-	n = 1000000000 + INT_MIN;
+	_putchar((~(unsigned int)n + 1) >> 31);
+	n = ~n + 1;
 	}
 
 	if (n < 0)
