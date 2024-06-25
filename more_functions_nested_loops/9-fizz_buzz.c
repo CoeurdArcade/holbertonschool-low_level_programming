@@ -2,8 +2,7 @@
 #include <stdio.h>
 
 /**
- * main  - a program that prints the numbers from 1 to 100
- * @main: numbers input
+ * main - a program that prints the numbers from 1 to 100
  *
  * Returns: prints of numbers,
  *	Fizz for multiples of 3,
