@@ -4,7 +4,7 @@
 /**
  * main  - a program that prints the numbers from 1 to 100
  *
- * Result: prints of numbers,
+ * Returns: prints of numbers,
  *	Fizz for multiples of 3,
  *	Buzz for multiples of 5,
  *	FizzBuzz for multiples of 3 and 5,
