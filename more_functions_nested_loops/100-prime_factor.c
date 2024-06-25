@@ -1,5 +1,5 @@
-#include "main.h"
 #include <stdio.h>
+#include <math.h>
 
 /**
  * prime_factor - a program that finds the largest prime factor
