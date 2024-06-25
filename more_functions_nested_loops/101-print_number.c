@@ -7,6 +7,13 @@
 
 void print_number(int n)
 {
+	if (n == INT_MIN)
+	{
+	_putchar('-');
+	_putchar('2');
+	n = 1000000000 + INT_MIN;
+	}
+
 	if (n < 0)
 	{
 	_putchar('-');
