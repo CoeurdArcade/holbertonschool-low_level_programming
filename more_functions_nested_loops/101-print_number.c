@@ -1,4 +1,5 @@
-#include "main.h"
+#include "101-main.h"
+
 /**
  * print_number - a function that print a number
  * @n: variable input
