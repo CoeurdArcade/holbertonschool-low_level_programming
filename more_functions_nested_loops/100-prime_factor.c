@@ -2,10 +2,10 @@
 #include <math.h>
 
 /**
- * prime_factor - a program that finds the largest prime factor
- * @n: prints the largest prime factor of a number
+ * main - a program that finds the largest prime factor
+ * @n: 612852475143
  *
- * Result: 612852475143
+ * Result: success value
  */
 
 int main(void)
