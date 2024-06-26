@@ -10,7 +10,7 @@ void print_number(int n)
 	if (n == INT_MIN)
 	{
 	_putchar('-');
-	_putchar((~(unsigned int)n + 1) >> 31);
+	_putchar((~(unsigned int)n + 1) >> 32);
 	n = ~n + 1;
 	}
 
