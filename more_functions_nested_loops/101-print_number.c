@@ -1,27 +1,31 @@
 #include "main.h"
+#include <limits.h>
 
 /**
- * print_number - prints an integer using only _putchar function
- * @n: the number to print
+ * main - a function that prints an integer
+ * @n: integer
+ *
+ * Return: specific path integer
  */
 
 void print_number(int n)
 {
-	if (n == INT_MIN)
-	{
-	_putchar('-');
-	_putchar((~(unsigned int)n + 1) >> 30);
-	n = ~n + 1;
-	}
+	unsigned int n1;
 
 	if (n < 0)
 	{
+	n1 = -n;
 	_putchar('-');
-	n = -n;
+	}
+	else
+	{
+	n1 = n;
 	}
 
-	if (n / 10 != 0)
-	print_number(n / 10);
+	if (n1 / 10)
+	{
+	print_number(n1 / 10);
+	}
 
-	_putchar(n % 10 + '0');
+	_putchar((n1 % 10) + '0');
 }
