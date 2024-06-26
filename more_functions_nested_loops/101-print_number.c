@@ -1,11 +1,10 @@
 #include "main.h"
-#include <limits.h>
 
 /**
- * main - a function that prints an integer
- * @n: integer
+ * print_number - prints an integer
+ * @n: integer to be printed
  *
- * Return: specific path integer
+ * Return: integer result
  */
 
 void print_number(int n)
