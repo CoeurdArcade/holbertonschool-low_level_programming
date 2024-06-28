@@ -13,7 +13,8 @@ char *cap_string(char *pctms)
 {
 	int lcktcis, iciocas;
 
-	char spe[13] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
+	char spe[13] = {' ', '\t', '\n', ',', ';', '.', '!', '?',
+	'"', '(', ')', '{', '}'};
 
 	for (lcktcis = 0; pctms[lcktcis] != '\0'; lcktcis++)
 	{
