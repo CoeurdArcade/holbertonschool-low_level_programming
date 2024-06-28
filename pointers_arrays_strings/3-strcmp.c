@@ -7,7 +7,7 @@
  *
  * Return: 0 if spcaa1 and spcaa2 equal NULL, or spcaa1 equal NULL
  * *spcaa1 - *spcaa2 keeps comparaison
- * 
+ *
  */
 
 int _strcmp(char *spcaa1, char *spcaa2)
