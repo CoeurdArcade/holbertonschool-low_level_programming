@@ -9,7 +9,7 @@
  * Return: a pointer of the new chain byte str destination
  */
 
-char *_strncat(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int nbc)
 {
 	int iv1, iv2;
 
