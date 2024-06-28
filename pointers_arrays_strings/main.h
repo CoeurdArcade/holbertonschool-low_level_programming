@@ -20,7 +20,7 @@ int _strcmp(char *spcaa1, char *spcaa2);
 void reverse_array(int *pai, int neia);
 char *string_toupper(char *stm);
 char *cap_string(char *pctms);
-char *leet(char *);
+char *leet(char *scein);
 char *rot13(char *);
 void print_number(int n);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
