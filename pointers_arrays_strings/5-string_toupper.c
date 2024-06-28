@@ -9,7 +9,7 @@
  * Return: the resulting string modified
  */
 
-char *string_toupper(char *stm);
+char *string_toupper(char *stm)
 {
 	int ivc;
 
