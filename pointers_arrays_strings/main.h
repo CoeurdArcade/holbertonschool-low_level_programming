@@ -19,7 +19,7 @@ char *_strncpy(char *dest, char *src, int nbcc);
 int _strcmp(char *spcaa1, char *spcaa2);
 void reverse_array(int *pai, int neia);
 char *string_toupper(char *stm);
-char *cap_string(char *);
+char *cap_string(char *pctms);
 char *leet(char *);
 char *rot13(char *);
 void print_number(int n);
