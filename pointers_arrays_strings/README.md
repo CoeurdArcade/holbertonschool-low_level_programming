@@ -75,3 +75,51 @@ QUIZ
 - int arr[5];
 - What is the equivalent of typing arr[2]?
 - Answer: * (arr + 2)
+
+EVEN MORE POINTERS, ARRAYS AND STRINGS
+
+- What are pointers to pointers and how to use them
+- What are multidimensional arrays and how to use them
+- What are the most common C standard library functions to manipulate strings
+
+READ
+
+C - pointer to pointer
+C - pointer to pointer with example
+Multi-dimensional Arrays in C
+Two dimensional (2D) arrays in C programming with example
+
+QUIZ
+
+What is the size of p in this code: int * p; ?
+ANSWER: 8 bytes
+
+What is the size of p in this code: int ** p; ?
+ANSWER: 8 bytes
+
+In this following code, what is the value of a[0][0] ?
+int a[5][2] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10}};
+ANSWER: 1
+
+In this following code, what is the value of a[3][0]?
+int a[5][2] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10}};
+ANSWER: 7
+
+In this following code, what is the value of a[3][1]?
+int a[5][2] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10}};
+ANSWER: 8
+
+In this following code, what is the value of a[1][1]?
+int a[5][2] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10}};
+ANSWER: 4
+
+What is the size of * p in this code ?
+int * * p; ?
+ANSWER: 8 bytes
+
+What is the size of * p in this code ?
+int * p;
+ANSWER: 4 bytes
+
+What is stored inside a pointer to a pointer to an int?
+ANSWER: An address where an address is stored
