@@ -25,7 +25,7 @@ char *rot13(char *);
 void print_number(int n);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
 char *_memset(char *matf, char ctp, unsigned int ntcctp);
-char *_memcpy(char *dest, char *src, unsigned int n);
+char *_memcpy(char *dma, char *smatc, unsigned int nbtc);
 char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
