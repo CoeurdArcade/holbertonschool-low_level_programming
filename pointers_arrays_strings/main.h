@@ -27,7 +27,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r);
 char *_memset(char *matf, char ctp, unsigned int ntcctp);
 char *_memcpy(char *dma, char *smatc, unsigned int nbtc);
 char *_strchr(char *sts, char ctf);
-unsigned int _strspn(char *s, char *accept);
+unsigned int _strspn(char *isbs, char *sisbs);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 void print_chessboard(char (*a)[8]);
