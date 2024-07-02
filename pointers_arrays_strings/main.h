@@ -30,7 +30,7 @@ char *_strchr(char *sts, char ctf);
 unsigned int _strspn(char *isbs, char *sisbs);
 char *_strpbrk(char *sobis, char *scoblf);
 char *_strstr(char *lsts, char *lstlf);
-void print_chessboard(char (*a)[8]);
+void print_chessboard(char (*ptda)[8]);
 void print_diagsums(int *a, int size);
 void set_string(char **s, char *to);
 #endif
