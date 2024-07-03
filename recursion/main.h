@@ -8,7 +8,7 @@ int _strlen_recursion(char *civpa);
 int factorial(int rcfi);
 int _pow_recursion(int ivr, int iprr);
 int _sqrt_recursion(int nsrf);
-static int actual_sqrt_recursion(int nsrf, int isrp);
+int actual_sqrt_recursion(int nsrf, int lisrp, int hisrp);
 int sqrt(int nsrf);
 int is_prime_number(int n);
 int is_palindrome(char *s);
