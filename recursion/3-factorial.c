@@ -2,17 +2,16 @@
 
 /**
  * int_factorial - function that returns the factorial given digit
- * @n: given number
+ * @rcfi: recursive calculator factorial integer 
  *
- * Return: factorial recursives
+ * Return: final factorial value for base case reached
  */
 
-int_factorial(int n)
+int factorial(int rcfi)
 {
-	n = 0;
-	{
-	if (n != 0)
-	return (-1);
-	return (n, "%d", n++)
-	}
+	if (rcfi < 0)
+		return (-1);
+	if (rcfi == 0)
+		return (1);
+	return (rcfi * factorial(rcfi - 1));
 }
