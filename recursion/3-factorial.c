@@ -7,9 +7,8 @@
  * Return: factorial recursives
  */
 
-main int_factorial(int n)
+int_factorial(int n)
 {
-	int n;
 	n = 0;
 	{
 	if (n != 0)
