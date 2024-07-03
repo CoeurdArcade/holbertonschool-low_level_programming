@@ -2,7 +2,7 @@
 
 /**
  * int_factorial - function that returns the factorial given digit
- * @rcfi: recursive calculator factorial integer 
+ * @rcfi: recursive calculator factorial integer
  *
  * Return: final factorial value for base case reached
  */
