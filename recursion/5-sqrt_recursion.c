@@ -9,34 +9,49 @@
  * @nsrf: number square root to find
  *
  * Return: natural square root of nsrf or NO_SQUARE_ROOT
+ * handles negative inputs by error message
  */
 
 int _sqrt_recursion(int nsrf)
 {
-	return actual_sqrt_recursion(nsrf, 0);
+	if (nsrf < 0)
+	{
+	return NO_SQUARE_ROOT;
+	}
+	else
+	{
+	return actual_sqrt_recursion(nsrf, 0, nsrf);
+	}
 }
 
 /**
  * actual_sqrt_recursion - helper function performing actual
  * calculation using recursion
  * @nsrf: number square root to find
- * @isrp: iteration square root path
+ * @lisrp: low iteration square root path
+ * @misrp: mid iteration square root path
+ * @hisrp: high iteration square root path
  *
  * Return: square root path guess if perfect square or
  * keeps recursing with new guess
  */
 
-static int actual_sqrt_recursion(int nsrf, int isrp)
+int actual_sqrt_recursion(int nsrf, int lisrp, int hisrp)
 {
-	int square = isrp * isrp;
-	if (square == nsrf || square > nsrf)
+	if (lisrp * lisrp == nsrf || hisrp * hisrp == nsrf)
 	{
-	return ((square == nsrf ? isrp : NO_SQUARE_ROOT):
+	return lisrp;
 	}
-	else
+
+int misrp = (lisrp + hisrp - 1) / 2; 
+	if (misrp * misrp == nsrf)
 	{
-	return actual_sqrt_recursion(nsrf, isrp + 1);
+	return misrp;
 	}
+	else if (misrp * misrp > nsrf)
+	{
+	return actual_sqrt_recursion(nsrf, misrp + 1, hisrp);
+	}	
 }
 
 /**
@@ -44,7 +59,10 @@ static int actual_sqrt_recursion(int nsrf, int isrp)
  * and a inner helper function. This function checks negative inputs 
  * @nsrf: number square root to find
  *
- * Return: square root path
+ * Return: Negative input check before calling inner helper function
+ * and calls the inner helper function with low value of zero and
+ * high value equal to argument nsrf. This performs binary search to
+ * find the square root
  */
 
 int sqrt(int nsrf)
