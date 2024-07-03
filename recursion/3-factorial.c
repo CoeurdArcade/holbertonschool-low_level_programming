@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * int factorial - function that returns the factorial given digit
+ * factorial - function that returns the factorial given digit
  * @rcfi: recursive calculator factorial integer
  *
  * Return: final factorial value for base case reached
