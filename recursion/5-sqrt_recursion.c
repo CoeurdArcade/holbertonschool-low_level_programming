@@ -31,7 +31,7 @@ static int actual_sqrt_recursion(int nsrf, int isrp)
 	int square = isrp * isrp;
 	if (square == nsrf || square > nsrf)
 	{
-	return ((square == n) ? isrp : NO_SQUARE_ROOT):
+	return ((square == nsrf ? isrp : NO_SQUARE_ROOT):
 	}
 	else
 	{
