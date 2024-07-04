@@ -15,8 +15,7 @@
  * keeps recursing with new guess
  * & Negative input check before calling inner helper function
  * and calls the inner helper function with low value of zero and
- * high value equal to argument nsrf. This performs binary search to
- * find the square root
+ * high value to argument nsrf
  */
 
 int actual_sqrt_recursion(int nsrf, int isrp);
@@ -27,6 +26,16 @@ int _sqrt_recursion(int nsrf)
 	return (-1);
 	return (actual_sqrt_recursion(nsrf, 1));
 }
+
+/**
+ * actual_sqrt_recursion - call helper function defined before
+ * main function
+ * @nsrf: number square root to find by his double
+ * @isrp: double for checking low, middle and high value equal
+ * to argument nsrf
+ *
+ * Return: This performs binary search to find square root
+ */
 
 int actual_sqrt_recursion(int nsrf, int isrp)
 {
