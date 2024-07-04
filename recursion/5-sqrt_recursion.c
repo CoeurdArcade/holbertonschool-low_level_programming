@@ -10,9 +10,7 @@
  * calculation using recursion
  * & with double calculates the natural square root number using recursion
  * @nsrf: number square root to find
- * @lisrp: low iteration square root path
- * @misrp: mid iteration square root path
- * @hisrp: high iteration square root path
+ * @isrp: iteration square root path
  *
  * Return: natural square root of nsrf or NO_SQUARE_ROOT
  * handles negative inputs by error message
@@ -25,46 +23,22 @@
  * 
  */
 
+int actual_sqrt_recursion(int nsrf, int isrt);
+
 int _sqrt_recursion(int nsrf)
 {
 	if (nsrf < 0)
-	{
-	return NO_SQUARE_ROOT;
-	}
-	else
-	{
-	return _sqrt_recursion(nsrf, 0, nsrf);
+	return (NO_SQUARE_ROOT);
+	return (actual_sqrt_recursion(nsrf, 0));
 	}
 }
-int _sqrt_recursion(int nsrf, int lisrp, int hisrp)
+
+int actual_sqrt_recursion(int nsrf, int isrt)
 {
-	lisrp = 0
-	hisrp = 0
-	if (lisrp * lisrp == nsrf || hisrp * hisrp == nsrf)
-	{
-	return lisrp;
-	}
-}
-double int(misrp);
-{
-	misrp = (lisrp + hisrp - 1) / 2;
-	if (misrp * misrp == nsrf)
-	{
-	return misrp;
-	}
-	else if (misrp * misrp > nsrf)
-	{
-	return _sqrt_recursion(nsrf, misrp + 1, hisrp);
-	}	
-}
-int _sqrt_recursion(int nsrf)
-{
-	if (nsrf < 0)
-	{
-	return NO_SQUARE_ROOT;
-	}
-	else
-	{
-	return _sqrt_recursion(nsrf);
-	}
+	if (isrt * isrt > nsrf)
+	return (NO_SQUARE_ROOT);
+	if (isrt * isrt == nsrf)
+	return (nsrf)
+	return (actual_sqrt_recursion(nsrf, isrt + 1));
+
 }
