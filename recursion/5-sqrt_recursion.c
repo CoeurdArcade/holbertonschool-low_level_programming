@@ -6,9 +6,9 @@
 /**
  * _sqrt_recursion - Main function providing entry point
  * for calling the recursive square root calculation
- * actual_sqrt_recursion - helper function performing actual
+ * & helper function with 3 integers performing actual
  * calculation using recursion
- * sqrt - Calculates the natural square root number using recursion
+ * & with double calculates the natural square root number using recursion
  * @nsrf: number square root to find
  * @lisrp: low iteration square root path
  * @misrp: mid iteration square root path
@@ -33,31 +33,32 @@ int _sqrt_recursion(int nsrf)
 	}
 	else
 	{
-	return actual_sqrt_recursion(nsrf, 0, nsrf);
+	return _sqrt_recursion(nsrf, 0, nsrf);
 	}
-}
 
-int actual_sqrt_recursion(int nsrf, int lisrp, int hisrp)
-{
+int _sqrt_recursion(int nsrf, int lisrp, int hisrp)
+
+	lisrp = 0
+	hisrp = 0
 	if (lisrp * lisrp == nsrf || hisrp * hisrp == nsrf)
 	{
 	return lisrp;
 	}
 
-double misrp = (lisrp + hisrp - 1) / 2; 
+double int misrp;
 
+	misrp = (lisrp + hisrp - 1) / 2;
 	if (misrp * misrp == nsrf)
 	{
 	return misrp;
 	}
 	else if (misrp * misrp > nsrf)
 	{
-	return actual_sqrt_recursion(nsrf, misrp + 1, hisrp);
+	return _sqrt_recursion(nsrf, misrp + 1, hisrp);
 	}	
-}
 
-int sqrt(int nsrf)
-{
+double int _sqrt_recursion(int nsrf)
+
 	if (nsrf < 0)
 	{
 	return NO_SQUARE_ROOT;
