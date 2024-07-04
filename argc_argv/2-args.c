@@ -5,9 +5,9 @@
  * main - prints all arguments it receives
  * @argc: integer representing number of arguments
  * @argv: array of strings containing the arguments
- * @iiv: integer index variable
+ * iiv s for integer index variable
  *
- * Return: Always 0 (Success)
+ * Return: Value 0 for success
  */
 
 int main(int argc, char *argv[])
