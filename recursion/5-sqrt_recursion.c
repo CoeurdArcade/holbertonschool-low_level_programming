@@ -44,7 +44,8 @@ int actual_sqrt_recursion(int nsrf, int lisrp, int hisrp)
 	return lisrp;
 	}
 
-int misrp = (lisrp + hisrp - 1) / 2; 
+long long int misrp = (lisrp + hisrp - 1) / 2; 
+
 	if (misrp * misrp == nsrf)
 	{
 	return misrp;
