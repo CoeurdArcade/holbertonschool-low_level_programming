@@ -53,7 +53,7 @@ int _atoi(char *stc)
 	if (bftkde == 0)
 	return (0);
 
-	return (artktvi);
+	return (artktiv);
 }
 
 /**
