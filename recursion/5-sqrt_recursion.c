@@ -27,15 +27,15 @@ int _sqrt_recursion(int nsrf)
 {
 	if (nsrf < 0)
 	return (-1);
-	return (actual_sqrt_recursion(nsrf, 0));
+	return (actual_sqrt_recursion(nsrf, 1));
 }
 
 int actual_sqrt_recursion(int nsrf, int isrt)
 {
 	if (isrt * isrt > nsrf)
-	return (-1);
+	return (-isrt);
 	if (isrt * isrt == nsrf)
-	return (nsrf);
+	return (isrt);
 	return (actual_sqrt_recursion(nsrf, isrt + 1));
 
 }
