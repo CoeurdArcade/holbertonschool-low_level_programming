@@ -1,5 +1,6 @@
 #include "main.h"
-#include <maths.h>
+#include <math.h>
+#include <limits.h>
 
 /**
  * _sqrt_recursion - Main function providing entry point
