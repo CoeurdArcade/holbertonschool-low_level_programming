@@ -27,7 +27,7 @@
 
 int _sqrt_recursion(int nsrf)
 {
-	if = (nsrf < 0)
+	if (nsrf < 0)
 	{
 	return NO_SQUARE_ROOT;
 	}
@@ -45,7 +45,7 @@ int _sqrt_recursion(int nsrf, int lisrp, int hisrp)
 	return lisrp;
 	}
 }
-double int misrp;
+double int(misrp);
 {
 	misrp = (lisrp + hisrp - 1) / 2;
 	if (misrp * misrp == nsrf)
@@ -57,9 +57,9 @@ double int misrp;
 	return _sqrt_recursion(nsrf, misrp + 1, hisrp);
 	}	
 }
-double int _sqrt_recursion(int nsrf)
+int _sqrt_recursion(int nsrf)
 {
-	if = (nsrf < 0)
+	if (nsrf < 0)
 	{
 	return NO_SQUARE_ROOT;
 	}
