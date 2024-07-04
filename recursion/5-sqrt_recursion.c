@@ -1,6 +1,4 @@
 #include "main.h"
-/* Constant representing no square root 
- */
 #define NO_SQUARE_ROOT -1
 
 /**
