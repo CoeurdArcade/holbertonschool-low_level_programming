@@ -30,7 +30,6 @@ int _sqrt_recursion(int nsrf)
 	if (nsrf < 0)
 	return (NO_SQUARE_ROOT);
 	return (actual_sqrt_recursion(nsrf, 0));
-	}
 }
 
 int actual_sqrt_recursion(int nsrf, int isrt)
@@ -38,7 +37,7 @@ int actual_sqrt_recursion(int nsrf, int isrt)
 	if (isrt * isrt > nsrf)
 	return (NO_SQUARE_ROOT);
 	if (isrt * isrt == nsrf)
-	return (nsrf)
+	return (nsrf);
 	return (actual_sqrt_recursion(nsrf, isrt + 1));
 
 }
