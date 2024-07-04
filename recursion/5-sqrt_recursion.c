@@ -1,13 +1,11 @@
 #include "main.h"
-#include <math.h>
-#include <limits.h>
 
 /**
  * _sqrt_recursion - Main function providing entry point
  * for calling the recursive square root calculation
- * & helper function with 2 integers performing actual
- * calculation using recursion
- * & with double calculates the natural square root number using recursion
+ * actual_sqrt_recursion - helper function with double integer
+ * performing actual calculation using recursion and
+ * calculates the natural square root number using recursion
  * @nsrf: number square root to find
  * @isrp: iteration square root path
  *
@@ -21,7 +19,7 @@
  * find the square root
  */
 
-int actual_sqrt_recursion(int nsrf, int isrt);
+int actual_sqrt_recursion(int nsrf, int isrp);
 
 int _sqrt_recursion(int nsrf)
 {
@@ -30,12 +28,12 @@ int _sqrt_recursion(int nsrf)
 	return (actual_sqrt_recursion(nsrf, 1));
 }
 
-int actual_sqrt_recursion(int nsrf, int isrt)
+int actual_sqrt_recursion(int nsrf, int isrp)
 {
-	if (isrt * isrt > nsrf)
-	return (-isrt);
-	if (isrt * isrt == nsrf)
-	return (isrt);
-	return (actual_sqrt_recursion(nsrf, isrt + 1));
+	if (isrp * isrp > nsrf)
+	return (-isrp);
+	if (isrp * isrp == nsrf)
+	return (isrp);
+	return (actual_sqrt_recursion(nsrf, isrp + 1));
 
 }
