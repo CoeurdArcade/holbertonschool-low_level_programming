@@ -2,6 +2,6 @@
 #define FILE_MAIN
 
 int _putchar(char c);
-int _atoi(char *stc);
+int _atoi(char *fcpaa);
 
 #endif
