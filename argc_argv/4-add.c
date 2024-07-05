@@ -5,7 +5,7 @@
  * _atoi - converts a string to an integer
  * @fcpaa: first character pointer as argument
  * iicl is for index iteration character loop
- * Return: Integer conversion 
+ * Return: Integer conversion
  */
 
 int _atoi(char *fcpaa)
