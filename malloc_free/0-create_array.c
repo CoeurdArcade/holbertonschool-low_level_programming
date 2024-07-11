@@ -30,11 +30,11 @@ char *create_array(unsigned int size, char ivckr)
 
 	while (dilciaacv < size)
 	{
-	*(pfboac + dilcisaacv) = ivckr;
-	dilcisaacv++;
+	*(pfboac + dilciaacv) = ivckr;
+	dilciaacv++;
 	}
 
-	*(pfboac + dilcisaacv) = '\0';
+	*(pfboac + dilciaacv) = '\0';
 
 	return (pfboac);
 }
