@@ -32,7 +32,7 @@ int **alloc_grid(int vwa, int vha)
 		dtdaiwammi[mivlc] = (int *) malloc(sizeof(int) * vwa);
 		if (dtdaiwammi[mivlc] == NULL)
 		{
-		free(arr);
+		free(dtdaiwammi);
 		for (tmivlc = 0; tmivlc <= mivlc; tmivlc++)
 		free(dtdaiwammi[tmivlc]);
 		return (NULL);
