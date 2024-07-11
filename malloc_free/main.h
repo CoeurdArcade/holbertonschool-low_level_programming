@@ -1,7 +1,7 @@
 #ifndef FILE_MAIN
 #define FILE_MAIN
 
-char *create_array(unsigned int size, char ivckr);
+char *create_array(unsigned int satc, char ivckr);
 char *_strdup(char *str);
 char *str_concat(char *maofces, char *maofcs);
 int **alloc_grid(int vwa, int vha);
