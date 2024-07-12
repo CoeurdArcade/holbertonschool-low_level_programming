@@ -12,7 +12,7 @@
   * built by concatenating the arguments
   * tkastncns is for track keeper and storage of total number characters
   * in new string
-  * 
+  *
   * Return: NULL if ac == 0 or av == null, Pointer to new string.
   * NULL on fail.
   */
