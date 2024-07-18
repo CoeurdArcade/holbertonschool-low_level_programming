@@ -3,16 +3,18 @@
 
 /**
  * init_dog - initializes a variable of type struct dog
- * @d: pointer to struct dog to initialize
- * @name: name to initialize
- * @age: age to initialize
- * @owner: owner to initialize
+ * @psaa: for pointer to structures and activates the arguments
+ * from each one
+ * @name: characters to initialize
+ * @age: floating point number to initialize
+ * @owner: characters to initialize
  */
-void init_dog(struct dog *d, char *name, float age, char *owner)
+
+void init_dog(struct dog *psaa, char *name, float age, char *owner)
 {
-	if (d == NULL)
-		d = malloc(sizeof(struct dog));
-	d->name = name;
-	d->age = age;
-	d->owner = owner;
+	if (psaa == NULL)
+		psaa = malloc(sizeof(struct dog));
+	psaa->name = name;
+	psaa->age = age;
+	psaa->owner = owner;
 }
