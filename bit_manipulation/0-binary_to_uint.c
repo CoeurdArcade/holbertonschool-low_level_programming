@@ -16,14 +16,14 @@ unsigned int binary_to_uint(const char *b)
 	if (b == NULL)
 		return (0);
 
-	// Move to the end of the string
+	/* Move to the end of the string */
 	while (*b != '\0')
 		b++;
 
-	// Move back one step to process the last character
+	/* Move back one step to process the last character */
 	b--;
 
-	// Validate and convert in a single loop
+	/* Validate and convert in a single loop */
 	while (b >= b)
 	{
 		if (*b != '0' && *b != '1')
