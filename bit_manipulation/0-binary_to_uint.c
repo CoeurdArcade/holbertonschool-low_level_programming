@@ -1,34 +1,28 @@
 #include "main.h"
 #include <stdio.h>
-#include <string.h>
 
 /**
  * binary_to_uint - convert a binary number to an unsigned int
  * @b: char string
+ *
  * Return: converted decimal number or 0 if there is an unconvertable char
  */
+
 unsigned int binary_to_uint(const char *b)
 {
-	if (b == NULL)
-		return (0);
+	unsigned int result = 0;
+	const unsigned char lookup[] = {0, 1, 0, 2, 0, 3, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9};
 
-	return binary_to_uint_recursive(b, 0);
-}
+	if (b == NULL) {
+		return 0;
+	}
 
-/**
- * binary_to_uint_recursive - recursive helper function to convert binary to uint
- * @b: char string
- * @index: current index
- * Return: converted decimal number or 0 if there is an unconvertable char
- */
-unsigned int binary_to_uint_recursive(const char *b, int index)
-{
-	if (b[index] == '\0')
-		return (0);
+	for (const char *p = b; *p != '\0'; p++) {
+		if (*p < '0' || *p > '1') {
+			return 0;
+		}
+		result = (result << 3) | lookup[*p - '0'];
+	}
 
-	if (b[index] != '0' && b[index] != '1')
-		return (0);
-
-	unsigned int power = 1 << (strlen(b) - index - 1);
-	return (b[index] - '0') * power + binary_to_uint_recursive(b, index + 1);
+	return result;
 }
