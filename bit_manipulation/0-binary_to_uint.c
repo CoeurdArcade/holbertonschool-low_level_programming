@@ -4,37 +4,30 @@
 /**
  * binary_to_uint - convert a binary number to an unsigned int
  * @b: char string
- *
  * Return: converted decimal number or 0 if there is an unconvertable char
  */
-
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int total = 0;
-	unsigned int power = 1;
-
 	if (b == NULL)
 		return (0);
 
-	/* Move to the end of the string */
-	while (*b != '\0')
-		b++;
+	return binary_to_uint_recursive(b, 0);
+}
 
-	/* Move back one step to process the last character */
-	b--;
+/**
+ * binary_to_uint_recursive - recursive helper function to convert binary to uint
+ * @b: char string
+ * @index: current index
+ * Return: converted decimal number or 0 if there is an unconvertable char
+ */
+unsigned int binary_to_uint_recursive(const char *b, int index)
+{
+	if (b[index] == '\0')
+		return (0);
 
-	/* Validate and convert in a single loop */
-	while (b >= b)
-	{
-		if (*b != '0' && *b != '1')
-			return (0);
+	if (b[index] != '0' && b[index] != '1')
+		return (0);
 
-		if (*b == '1')
-			total += power;
-
-		power *= 2;
-		b--;
-	}
-
-	return (total);
+	unsigned int power = 1 << (strlen(b) - index - 1);
+	return (b[index] - '0') * power + binary_to_uint_recursive(b, index + 1);
 }
