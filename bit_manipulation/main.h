@@ -1,10 +1,9 @@
-/**
- * main.h - Header file containing declarations for all functions
- * used in the bit_manipulation directory.
- */
-
 #ifndef MAIN_H
 #define MAIN_H
+
+/** Header file containing declarations prototypes for all
+ * functions used in the current directory
+ */
 
 /**
  * _putchar - writes the character c to stdout
