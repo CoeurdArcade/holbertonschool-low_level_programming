@@ -1,11 +1,9 @@
-#ifndef MAIN_H
-#define MAIN_H
-
 /**
  * Header file containing declarations prototypes for all
- * functions used in the current directory
+ * files used in the current directory
  */
-
+#ifndef MAIN_H
+#define MAIN_H
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
@@ -13,7 +11,6 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-
 int _putchar(char c);
 
 /**
@@ -22,7 +19,6 @@ int _putchar(char c);
  *
  * Return: converted decimal number or 0 if there is an unconvertable char
  */
-
 unsigned int binary_to_uint(const char *b);
 void print_binary(unsigned long int n);
 int get_bit(unsigned long int n, unsigned int index);
