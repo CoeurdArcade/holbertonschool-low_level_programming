@@ -1,9 +1,6 @@
-/**
- * Header file containing declarations prototypes for all
- * files used in the current directory
- */
 #ifndef MAIN_H
 #define MAIN_H
+
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
