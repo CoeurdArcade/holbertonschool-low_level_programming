@@ -1,7 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/** Header file containing declarations prototypes for all
+/**
+ * Header file containing declarations prototypes for all
  * functions used in the current directory
  */
 
