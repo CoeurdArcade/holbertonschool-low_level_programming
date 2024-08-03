@@ -1,13 +1,29 @@
+/**
+ * main.h - Header file containing declarations for all functions
+ * used in the bit_manipulation directory.
+ */
+
 #ifndef MAIN_H
 #define MAIN_H
 
 /**
- * Prototypes for bit_manipulation
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
 
 int _putchar(char c);
+
+/**
+ * binary_to_uint - convert a binary number to an unsigned int
+ * @b: char string
+ *
+ * Return: converted decimal number or 0 if there is an unconvertable char
+ */
+
 unsigned int binary_to_uint(const char *b);
-unsigned int binary_to_uint_recursive(const char *b, int index);
 void print_binary(unsigned long int n);
 int get_bit(unsigned long int n, unsigned int index);
 int set_bit(unsigned long int *n, unsigned int index);
