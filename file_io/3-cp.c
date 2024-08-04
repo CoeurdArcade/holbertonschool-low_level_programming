@@ -103,7 +103,7 @@ int main(int argc, char *argv[])
 /**
 * Change permissions to read-write only for all users
 */
-	if (chmod(argv[2], 0777) == -1)
+	if (chmod(argv[2], 0444) == -1)
 	{
 		print_error("Error: Can't change permissions of %s\n", argv[2], 99);
 	}
