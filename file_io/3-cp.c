@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 		print_error("Error: Can't read from file %s\n", argv[1], 98);
 	}
 
-	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (fd_to == -1)
 	{
 		close(fd_from);
