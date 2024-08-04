@@ -100,13 +100,5 @@ int main(int argc, char *argv[])
 		print_fd_error("Error: Can't close fd %d\n", fd_to, 100);
 	}
 
-/**
-* Change permissions to read-write only for all users
-*/
-	if (chmod(argv[2], 0444) == -1)
-	{
-		print_error("Error: Can't change permissions of %s\n", argv[2], 99);
-	}
-
 	return (0);
 }
