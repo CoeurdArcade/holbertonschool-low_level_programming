@@ -63,16 +63,16 @@ int main(int argc, char *argv[])
 	int from, to, r, w;
 	char *buffer;
 
-	if (argc != 2)
+	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
-	buffer = create_buffer(argv[3]);
-	from = open(argv[1], O_RDONLY);
+	buffer = create_buffer(argv[2]);
+	from = open(argv[3], O_RDONLY);
 	r = read(from, buffer, 1024);
-	to = open(argv[3], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
 		if (from == -1 || r == -1)
