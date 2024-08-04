@@ -1,4 +1,10 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 
 #define BUFFER_SIZE 1024
 
@@ -8,10 +14,21 @@
  * @filename: The name of the file associated with the error.
  * @code: The exit code.
  */
-
 void print_error(const char *message, const char *filename, int code)
 {
 	dprintf(STDERR_FILENO, message, filename);
+	exit(code);
+}
+
+/**
+ * print_fd_error - Prints an error message for file descriptor and exits with a given code.
+ * @message: The error message to print.
+ * @fd: The file descriptor associated with the error.
+ * @code: The exit code.
+ */
+void print_fd_error(const char *message, int fd, int code)
+{
+	dprintf(STDERR_FILENO, message, fd);
 	exit(code);
 }
 
@@ -22,7 +39,6 @@ void print_error(const char *message, const char *filename, int code)
  *
  * Return: 0 on success, or an error code on failure.
  */
-
 int main(int argc, char *argv[])
 {
 	int fd_from, fd_to;
@@ -68,12 +84,12 @@ int main(int argc, char *argv[])
 	if (close(fd_from) == -1)
 	{
 		close(fd_to);
-		print_error("Error: Can't close fd %d\n", fd_from, 100);
+		print_fd_error("Error: Can't close fd %d\n", fd_from, 100);
 	}
 
 	if (close(fd_to) == -1)
 	{
-		print_error("Error: Can't close fd %d\n", fd_to, 100);
+		print_fd_error("Error: Can't close fd %d\n", fd_to, 100);
 	}
 
 	return (0);
