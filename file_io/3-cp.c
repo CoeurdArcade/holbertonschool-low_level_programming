@@ -4,6 +4,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+
 char *create_buffer(char *file);
 void close_file(int fd);
 
@@ -13,7 +14,6 @@ void close_file(int fd);
  *
  * Return: A pointer to the newly-allocated buffer.
  */
-
 char *create_buffer(char *file)
 {
 	char *buffer;
@@ -33,7 +33,6 @@ char *create_buffer(char *file)
  * close_file - Closes file descriptors.
  * @fd: The file descriptor to be closed.
  */
-
 void close_file(int fd)
 {
 	int c;
@@ -59,7 +58,6 @@ void close_file(int fd)
  *              If file_to cannot be created or written to - exit code 99.
  *              If file_to or file_from cannot be closed - exit code 100.
  */
-
 int main(int argc, char *argv[])
 {
 	int from, to, r, w;
@@ -73,46 +71,33 @@ int main(int argc, char *argv[])
 
 	buffer = create_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
-	if (from == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		free(buffer);
-		exit(98);
-	}
+	r = read(from, buffer, 1024);
+	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-	to = open(argv[2],  O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (to == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		free(buffer);
-		close_file(from);
-		exit(99);
-		do {
-			r = read(from, buffer, 1024);
-			if (r == -1)
-			{
-				dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-				free(buffer);
-				close_file(from);
-				close_file(to);
-				exit(98);
-			}
+	do {
+		if (from == -1 || r == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			free(buffer);
+			exit(98);
+		}
 
-			w = write(to, buffer, r);
-			if (w == -1)
-			{
-				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-				free(buffer);
-				close_file(from);
-				close_file(to);
-				exit(99);
-			}
-		} while (r > 0);
+		w = write(to, buffer, r);
+		if (to == -1 || w == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			free(buffer);
+			exit(99);
+		}
 
-		free(buffer);
-		close_file(from);
-		close_file(to);
+		r = read(from, buffer, 1024);
+		to = open(argv[2], O_WRONLY | O_APPEND);
 
-		return (0);
-	}
+	} while (r > 0);
+
+	free(buffer);
+	close_file(from);
+	close_file(to);
+
+	return (0);
 }
