@@ -14,9 +14,23 @@
  * @filename: The name of the file associated with the error.
  * @code: The exit code.
  */
+
 void print_error(const char *message, const char *filename, int code)
 {
     dprintf(STDERR_FILENO, message, filename);
+    exit(code);
+}
+
+/**
+ * print_fd_error - Prints an error message for file descriptor and exits with a given code.
+ * @message: The error message to print.
+ * @fd: The file descriptor associated with the error.
+ * @code: The exit code.
+ */
+
+void print_fd_error(const char *message, int fd, int code)
+{
+    dprintf(STDERR_FILENO, message, fd);
     exit(code);
 }
 
