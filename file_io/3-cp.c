@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 #define BUFFER_SIZE 1024
 #define PERMISSIONS 0664
@@ -13,8 +11,21 @@
  */
 void print_error_and_exit(int code, const char *message, const char *filename)
 {
-	fprintf(stderr, "%s %s\n", message, filename);
+	dprintf(STDERR_FILENO, "%s %s\n", message, filename);
 	exit(code);
+}
+
+/**
+ * close_file - Closes a file descriptor and handles errors.
+ * @fd: The file descriptor to close.
+ */
+void close_file(int fd)
+{
+	if (close(fd) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
 }
 
 /**
@@ -26,49 +37,61 @@ void print_error_and_exit(int code, const char *message, const char *filename)
  */
 int main(int argc, char *argv[])
 {
-	FILE *file_from, *file_to;
-	char buffer[BUFFER_SIZE];
-	size_t bytes_read, bytes_written;
+	int fd_from, fd_to;
+	ssize_t bytes_read, bytes_written;
+	char *buffer;
 
 	if (argc != 3)
 	{
-		fprintf(stderr, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
-	file_from = fopen(argv[1], "r");
-	if (file_from == NULL)
+	fd_from = open(argv[1], O_RDONLY);
+	if (fd_from == -1)
 	{
 		print_error_and_exit(98, "Error: Can't read from file", argv[1]);
 	}
 
-	file_to = fopen(argv[2], "w");
-	if (file_to == NULL)
+	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSIONS);
+	if (fd_to == -1)
 	{
-		fclose(file_from);
+		close_file(fd_from);
 		print_error_and_exit(99, "Error: Can't write to", argv[2]);
 	}
 
-	while ((bytes_read = fread(buffer, 1, BUFFER_SIZE, file_from)) > 0)
+	buffer = malloc(BUFFER_SIZE);
+	if (buffer == NULL)
 	{
-		bytes_written = fwrite(buffer, 1, bytes_read, file_to);
-		if (bytes_written != bytes_read)
+		close_file(fd_from);
+		close_file(fd_to);
+		print_error_and_exit(99, "Error: Can't allocate memory", "");
+	}
+
+	while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0)
+	{
+		bytes_written = write(fd_to, buffer, bytes_read);
+		if (bytes_written == -1)
 		{
-			fclose(file_from);
-			fclose(file_to);
+			free(buffer);
+			close_file(fd_from);
+			close_file(fd_to);
 			print_error_and_exit(99, "Error: Can't write to", argv[2]);
 		}
 	}
 
-	if (ferror(file_from))
+	if (bytes_read == -1)
 	{
-		fclose(file_from);
-		fclose(file_to);
+		free(buffer);
+		close_file(fd_from);
+		close_file(fd_to);
 		print_error_and_exit(98, "Error: Can't read from file", argv[1]);
 	}
 
-	fclose(file_from);
-	fclose(file_to);
+	free(buffer);
+	close_file(fd_from);
+	close_file(fd_to);
 
 	return (0);
 }
+
