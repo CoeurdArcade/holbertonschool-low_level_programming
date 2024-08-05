@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
 		free(buffer);
 		close_file(fd_from);
 		close_file(fd_to);
-		print_error_and_exit(98, "Error: Can't read from file", argv[1]);
+		print_error_and_exit(99, "Error: Can't read from file", argv[1]);
 	}
 
 	free(buffer);
