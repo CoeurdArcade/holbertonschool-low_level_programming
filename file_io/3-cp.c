@@ -25,7 +25,7 @@ void print_error_and_exit(int code, const char *message, const char *filename)
  * @fd: The file descriptor to close.
  */
 
-void close_file(int fd,)
+void close_file(int fd)
 {
 	if (close(fd) == -1)
 	{
@@ -63,7 +63,6 @@ int main(int argc, char *argv[])
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSIONS);
 	if (fd_to == -1)
 	{
-		close_file(fd_from, argv[1]);
 		print_error_and_exit(99, "Error: Can't write to", argv[2]);
 	}
 
