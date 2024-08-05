@@ -13,7 +13,6 @@
  * @message: The error message to print.
  * @filename: The filename associated with the error.
  */
-
 void print_error_and_exit(int code, const char *message, const char *filename)
 {
 	dprintf(STDERR_FILENO, "%s %s\n", message, filename);
@@ -24,7 +23,6 @@ void print_error_and_exit(int code, const char *message, const char *filename)
  * close_file - Closes a file descriptor and handles errors.
  * @fd: The file descriptor to close.
  */
-
 void close_file(int fd)
 {
 	if (close(fd) == -1)
@@ -41,7 +39,6 @@ void close_file(int fd)
  *
  * Return: 0 on success, or an error code on failure.
  */
-
 int main(int argc, char *argv[])
 {
 	int fd_from, fd_to;
@@ -63,6 +60,7 @@ int main(int argc, char *argv[])
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSIONS);
 	if (fd_to == -1)
 	{
+		close_file(fd_from);
 		print_error_and_exit(99, "Error: Can't write to", argv[2]);
 	}
 
